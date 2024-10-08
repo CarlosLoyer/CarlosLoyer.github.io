@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CreditCard, DollarSign, Copy, Check, User, IdCard, Landmark, PiggyBank, Mail } from 'lucide-react'
+import { CreditCard, Copy, Check, User, Landmark, PiggyBank, Mail } from 'lucide-react'
 
 const BankDetails: React.FC = () => {
   const [copied, setCopied] = useState(false)
@@ -30,7 +30,7 @@ const BankDetails: React.FC = () => {
           <p>Nombre: {bankDetails.accountName}</p>
         </div>
         <div className="flex items-center mb-4">
-          <IdCard className="w-6 h-6 mr-2 text-blue-400" />
+          <User className="w-6 h-6 mr-2 text-blue-400" />
           <p>RUT: {bankDetails.accountRut}</p>
         </div>
         <div className="flex items-center mb-4">
