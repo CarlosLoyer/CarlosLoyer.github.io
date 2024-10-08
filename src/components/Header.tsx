@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <User className="w-8 h-8 mr-2" />
-          <h1 className="text-2xl font-bold">John Doe</h1>
+          <h1 className="text-2xl font-bold">Carlos Loyer</h1>
         </div>
         <nav>
           <ul className="flex space-x-4">

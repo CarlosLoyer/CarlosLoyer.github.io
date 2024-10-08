@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
-import { CreditCard, DollarSign, Copy, Check } from 'lucide-react'
+import { CreditCard, DollarSign, Copy, Check, User, IdCard, Landmark, PiggyBank, Mail } from 'lucide-react'
 
 const BankDetails: React.FC = () => {
   const [copied, setCopied] = useState(false)
 
   const bankDetails = {
-    accountNumber: 'XXXX-XXXX-XXXX-1234',
-    routingNumber: '123456789'
+    accountRut: '18681404-5',
+    accountName: 'Carlos Loyer Gaete',
+    accountEmail: 'cloyer.gaete@gmail.com',
+    accountBank: 'Banco Santander',
+    accountType: 'Cuenta Corriente',
+    accountNumber: '77863125',
   }
 
   const copyToClipboard = () => {
-    const detailsText = `Account Number: ${bankDetails.accountNumber}\nRouting Number: ${bankDetails.routingNumber}`
+    const detailsText = `${bankDetails.accountName}\n${bankDetails.accountRut}\n${bankDetails.accountBank}\n${bankDetails.accountType}\n${bankDetails.accountNumber}\n${bankDetails.accountEmail}`
     navigator.clipboard.writeText(detailsText).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
@@ -19,15 +23,31 @@ const BankDetails: React.FC = () => {
 
   return (
     <section id="bank" className="mb-12">
-      <h2 className="text-3xl font-bold mb-4 text-blue-400">Bank Transfer Details</h2>
+      <h2 className="text-3xl font-bold mb-4 text-blue-400">Datos para Transferencia</h2>
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <div className="flex items-center mb-4">
-          <CreditCard className="w-6 h-6 mr-2 text-blue-400" />
-          <p>Account Number: {bankDetails.accountNumber}</p>
+      <div className="flex items-center mb-4">
+          <User className="w-6 h-6 mr-2 text-blue-400" />
+          <p>Nombre: {bankDetails.accountName}</p>
         </div>
         <div className="flex items-center mb-4">
-          <DollarSign className="w-6 h-6 mr-2 text-blue-400" />
-          <p>Routing Number: {bankDetails.routingNumber}</p>
+          <IdCard className="w-6 h-6 mr-2 text-blue-400" />
+          <p>RUT: {bankDetails.accountRut}</p>
+        </div>
+        <div className="flex items-center mb-4">
+          <Landmark className="w-6 h-6 mr-2 text-blue-400" />
+          <p>Banco: {bankDetails.accountBank}</p>
+        </div>
+        <div className="flex items-center mb-4">
+          <PiggyBank className="w-6 h-6 mr-2 text-blue-400" />
+          <p>Tipo Cuenta: {bankDetails.accountType}</p>
+        </div>
+        <div className="flex items-center mb-4">
+          <CreditCard className="w-6 h-6 mr-2 text-blue-400" />
+          <p>Nro Cuenta: {bankDetails.accountNumber}</p>
+        </div>
+        <div className="flex items-center mb-4">
+          <Mail className="w-6 h-6 mr-2 text-blue-400" />
+          <p>Email: {bankDetails.accountEmail}</p>
         </div>
         <button
           onClick={copyToClipboard}
@@ -36,16 +56,14 @@ const BankDetails: React.FC = () => {
           {copied ? (
             <>
               <Check className="w-4 h-4 mr-2" />
-              Copied!
+              Copiado!
             </>
           ) : (
             <>
               <Copy className="w-4 h-4 mr-2" />
-              Copy to Clipboard
             </>
           )}
         </button>
-        <p className="text-sm text-gray-400 mt-2">Please contact for full bank details</p>
       </div>
     </section>
   )
