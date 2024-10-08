@@ -1,8 +1,9 @@
 {
-  "name": "personal-website",
+  "name": "carlosloyer.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://carlosloyer.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
