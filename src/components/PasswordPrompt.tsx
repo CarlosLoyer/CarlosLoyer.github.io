@@ -12,7 +12,7 @@ const PasswordPrompt: React.FC<PasswordPromptProps> = ({ onCorrectPassword }) =>
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // In a real application, you'd want to hash this password and compare it securely
-    if (password === 'secretpassword') {
+    if (password === 'showme') {
       onCorrectPassword()
     } else {
       setError('Incorrect password. Please try again.')
@@ -25,14 +25,14 @@ const PasswordPrompt: React.FC<PasswordPromptProps> = ({ onCorrectPassword }) =>
         <div className="flex items-center justify-center mb-6">
           <Lock className="w-12 h-12 text-blue-400" />
         </div>
-        <h2 className="text-2xl font-bold mb-4 text-center text-blue-400">Enter Password</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center text-blue-400">Ingrese contraseña</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full p-2 mb-4 bg-gray-700 text-white rounded"
-            placeholder="Enter password"
+            placeholder="Ingrese contraseña"
           />
           {error && <p className="text-red-500 mb-4">{error}</p>}
           <button
