@@ -2,21 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', sans-serif;
-}
-
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
-}
 
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  body {
+    @apply transition-colors duration-200;
   }
-  .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-400 dark:bg-indigo-500;
   }
 }
