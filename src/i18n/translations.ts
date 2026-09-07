@@ -73,6 +73,27 @@ export interface Translations {
   footer: {
     rights: string
   }
+  wishlist: {
+    title: string
+    subtitle: string
+    loading: string
+    error: string
+    empty: string
+    columns: {
+      item: string
+      category: string
+      price: string
+      priority: string
+      link: string
+      notes: string
+    }
+    priorities: {
+      alta: string
+      media: string
+      baja: string
+    }
+    linkLabel: string
+  }
 }
 
 const es: Translations = {
@@ -193,6 +214,27 @@ const es: Translations = {
   footer: {
     rights: 'Todos los derechos reservados.',
   },
+  wishlist: {
+    title: 'Lista de deseos',
+    subtitle: 'Para quienes se complican pensando qué regalarme. Sin presión: es solo una lista de ideas.',
+    loading: 'Cargando lista...',
+    error: 'No se pudo cargar la lista. Intenta recargar la página.',
+    empty: 'Todavía no hay nada en la lista.',
+    columns: {
+      item: 'Cosa',
+      category: 'Categoría',
+      price: 'Precio aprox.',
+      priority: 'Ganas',
+      link: 'Enlace',
+      notes: 'Notas',
+    },
+    priorities: {
+      alta: 'Muchas',
+      media: 'Medias',
+      baja: 'Pocas',
+    },
+    linkLabel: 'Ver',
+  },
 }
 
 const en: Translations = {
@@ -312,6 +354,27 @@ const en: Translations = {
   },
   footer: {
     rights: 'All rights reserved.',
+  },
+  wishlist: {
+    title: 'Wishlist',
+    subtitle: "For anyone overthinking what to get me. No pressure — it's just a list of ideas.",
+    loading: 'Loading list...',
+    error: 'Could not load the list. Try reloading the page.',
+    empty: 'Nothing on the list yet.',
+    columns: {
+      item: 'Item',
+      category: 'Category',
+      price: 'Approx. price',
+      priority: 'Want it',
+      link: 'Link',
+      notes: 'Notes',
+    },
+    priorities: {
+      alta: 'A lot',
+      media: 'Somewhat',
+      baja: 'A little',
+    },
+    linkLabel: 'View',
   },
 }
 

@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Reader from './pages/Reader'
+import Wishlist from './pages/Wishlist'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/bank-details/*" element={<ProtectedBankDetails />} />
                 <Route path="/read" element={<Reader />} />
+                <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="*" element={<Home />} />
               </Routes>
             </main>
