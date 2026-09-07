@@ -93,6 +93,9 @@ export interface Translations {
       baja: string
     }
     linkLabel: string
+    sortBy: string
+    sortAsc: string
+    sortDesc: string
   }
 }
 
@@ -221,19 +224,22 @@ const es: Translations = {
     error: 'No se pudo cargar la lista. Intenta recargar la página.',
     empty: 'Todavía no hay nada en la lista.',
     columns: {
-      item: 'Cosa',
+      item: 'Artículo',
       category: 'Categoría',
       price: 'Precio aprox.',
-      priority: 'Ganas',
+      priority: 'Prioridad',
       link: 'Enlace',
       notes: 'Notas',
     },
     priorities: {
-      alta: 'Muchas',
-      media: 'Medias',
-      baja: 'Pocas',
+      alta: 'Alta',
+      media: 'Media',
+      baja: 'Baja',
     },
     linkLabel: 'Ver',
+    sortBy: 'Ordenar por',
+    sortAsc: 'Orden ascendente',
+    sortDesc: 'Orden descendente',
   },
 }
 
@@ -365,16 +371,19 @@ const en: Translations = {
       item: 'Item',
       category: 'Category',
       price: 'Approx. price',
-      priority: 'Want it',
+      priority: 'Priority',
       link: 'Link',
       notes: 'Notes',
     },
     priorities: {
-      alta: 'A lot',
-      media: 'Somewhat',
-      baja: 'A little',
+      alta: 'High',
+      media: 'Medium',
+      baja: 'Low',
     },
     linkLabel: 'View',
+    sortBy: 'Sort by',
+    sortAsc: 'Ascending order',
+    sortDesc: 'Descending order',
   },
 }
 
